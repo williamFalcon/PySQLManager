@@ -1,6 +1,6 @@
 PySQLManager
 ============
-A simple class to abstract sql interactions.    
+A simple class to abstract sql interactions with Python programs.    
 
 Includes generic methods to handle most types of queries
 
