@@ -3,6 +3,7 @@ __author__ = 'waf04'
 import MySQLdb
 import traceback
 import json
+import re
 
 class Sql():
     """
@@ -205,7 +206,10 @@ class Sql():
 
             if hasattr(item, 'myId'):
                 query = query + ' WHERE myId = '+str(item.myId)
-
+            
+            #escape
+            query = re.escape(query)
+            
             #insert
             try:
                 cur.execute(query)
