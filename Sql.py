@@ -206,16 +206,13 @@ class Sql():
             if hasattr(item, 'myId'):
                 query = query + ' WHERE myId = '+str(item.myId)
             
-            #escape
-            query = query.replace("'s", r"\'")
-            
             #insert
             try:
                 cur.execute(query)
 
             except Exception:
-                print('insert error\nSQL Query Failed: ' + query)
-                traceback.print_exc()
+                print('**Error PySQLManager.Sql, line 211:\nSQL Query Failed: ' + query)
+                #traceback.print_exc()
 
         #close resources
         db.commit()
