@@ -3,7 +3,6 @@ __author__ = 'waf04'
 import MySQLdb
 import traceback
 import json
-import re
 
 class Sql():
     """
@@ -208,7 +207,7 @@ class Sql():
                 query = query + ' WHERE myId = '+str(item.myId)
             
             #escape
-            query = re.escape(query)
+            query = query.replace("'", r"\'")
             
             #insert
             try:
