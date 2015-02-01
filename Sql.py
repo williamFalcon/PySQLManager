@@ -211,7 +211,7 @@ class Sql():
                 cur.execute(query)
 
             except Exception:
-                print('insert error')
+                print('insert error\nSQL Query Failed: ' + query)
                 traceback.print_exc()
 
         #close resources
