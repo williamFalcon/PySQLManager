@@ -207,7 +207,7 @@ class Sql():
                 query = query + ' WHERE myId = '+str(item.myId)
             
             #escape
-            query = query.replace("'", r"\'")
+            query = query.replace("'s", r"\'")
             
             #insert
             try:
